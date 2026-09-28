@@ -1,0 +1,210 @@
+/* modules.css — สไตล์ของส่วนที่เขียนใหม่ (หน้าเรียนเพิ่มเติม, ควิซกลาง, เกม, Part 3, cheat sheet, พิมพ์) */
+
+/* ---------- ทั่วไป ---------- */
+.ap-sec{margin-top:8px}
+.ap-n{display:inline-grid;place-items:center;min-width:1.7em;height:1.7em;margin-right:.55em;border-radius:7px;background:var(--ap-ink);color:var(--ap-bg);font:700 .78em var(--ap-mono);vertical-align:.08em}
+.ap-learn{max-width:980px}
+.ap-learn p{margin:.4em 0 .8em}
+.ap-learn ul,.ap-learn ol{padding-left:1.3em}
+.ap-learn li{margin:.2em 0}
+.ap-chip.new{background:var(--ap-accent-soft);border-color:var(--ap-accent);color:var(--ap-accent);font-weight:700}
+.ap-note.extra{border-left-color:var(--ap-accent);background:var(--ap-accent-soft)}
+.ap-note p:last-child,.ap-note ul:last-child{margin-bottom:0}
+.ap-fs{border:1px solid var(--ap-line);border-radius:8px;margin:0 0 10px;padding:8px 12px}
+.ap-fs legend{font:700 .8rem var(--ap-mono);padding:0 6px}
+.ap-hero-prog{display:flex;align-items:center;gap:12px;max-width:520px;font-size:.88rem;color:var(--ap-ink2)}
+.ap-hero-prog .ap-bar{flex:1}
+.ap-tool{display:grid;gap:4px;align-content:start;text-decoration:none;color:var(--ap-ink);transition:transform .15s,border-color .15s}
+.ap-tool:hover{transform:translateY(-2px);border-color:var(--ap-accent)}
+.ap-gt{font:600 1.05rem var(--ap-display)}
+.ap-steps4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin:10px 0}
+.ap-steps4>div{background:var(--ap-surface);border:1px solid var(--ap-line);border-radius:var(--ap-radius);padding:10px 12px;font-size:.93rem}
+.ap-steps4 b{display:block;font:700 1.3rem var(--ap-display);color:var(--ap-accent)}
+.ap-idea{padding-left:1.4em}
+.ap-pre,.ap-prob pre,.gp-stmt pre,details.gp-sol pre{font:500 .86rem/1.55 var(--ap-mono);background:var(--ap-surface2);border:1px solid var(--ap-line);border-radius:8px;padding:10px 12px;overflow-x:auto;white-space:pre;margin:.6em 0}
+.ap-prob code,.gp-stmt code{font-family:var(--ap-mono);font-size:.9em;background:var(--ap-surface2);padding:0 .3em;border-radius:4px}
+.ap-prob pre code,.gp-stmt pre code,details.gp-sol pre code{background:none;padding:0}
+details.gp-sol{border:1px solid var(--ap-line);border-radius:10px;background:var(--ap-surface);padding:2px 14px;margin:14px 0}
+details.gp-sol summary{cursor:pointer;font-weight:700;padding:10px 0;color:var(--ap-accent)}
+details.gp-sol[open] summary{border-bottom:1px solid var(--ap-line);margin-bottom:8px}
+.gp-mini{border-collapse:collapse;font-size:.9rem;margin:8px 0}
+.gp-mini th,.gp-mini td{border:1px solid var(--ap-line);padding:5px 10px;text-align:left}
+.ap-cheatbox dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:8px 0 0}
+.ap-cheatbox dt{font-weight:700;color:var(--ap-ink2);font-size:.86rem}
+.ap-cheatbox dd{margin:0}
+.ap-after{margin-top:20px;display:grid;gap:12px}
+.ap-cta{margin-top:30px}
+.ap-body{min-height:200px}
+.ap-tool.ap-card b{display:block}
+
+/* ---------- ตาราง DP ที่คำนวณสด ---------- */
+.ap-dpt{border-collapse:separate;border-spacing:0;font:500 .92rem var(--ap-mono);margin:10px 0}
+.ap-dpt th,.ap-dpt td{border:1px solid var(--ap-line);padding:6px 10px;text-align:center;min-width:2.6em;background:var(--ap-surface)}
+.ap-dpt thead th,.ap-dpt tbody th{background:var(--ap-surface2);font-weight:700;color:var(--ap-ink2)}
+.ap-dpt tbody th{text-align:left;white-space:nowrap}
+.ap-dpt td.pick{background:var(--ap-ok-soft);color:var(--ap-ok);font-weight:700}
+.ap-dpt td.coin{background:var(--ap-cand-soft)}
+.ap-dpt td.coin::after{content:"●";color:var(--ap-cand);font-size:.6em;margin-left:3px;vertical-align:top}
+.ap-cheat td.ap-mono,.ap-cheat th{font-size:.86rem}
+
+/* ---------- ควิซกลาง ---------- */
+.ap-opt.picked{border-color:var(--ap-accent);background:var(--ap-accent-soft)}
+.ap-qz-time{font:700 .95rem var(--ap-mono);color:var(--ap-ink)}
+.ap-qz-time.low{color:var(--ap-bad)}
+.ap-why{margin-top:6px;font-weight:400;color:var(--ap-ink2)}
+.ap-qz-graph{display:block;width:100%;max-width:520px;margin:8px auto;background:var(--ap-surface2);border-radius:8px}
+.ap-score.ok{color:var(--ap-ok)}
+.ap-score{margin:0}
+.ap-qz-src{margin-bottom:4px}
+
+/* ---------- เกม ---------- */
+.ap-hud{display:flex;flex-wrap:wrap;gap:8px 22px;padding:10px 14px;border:1px solid var(--ap-line);border-radius:10px;background:var(--ap-surface);font:600 .92rem var(--ap-mono);margin-bottom:14px;position:sticky;top:calc(64px + env(safe-area-inset-top,0px));z-index:15}
+.ap-hud b{color:var(--ap-accent)}
+.ap-gin{margin:6px 0 4px}
+.ap-gask{margin:6px 0 10px}
+.ap-gtab td.blank{padding:2px}
+.ap-gtab td.blank input{width:4.2em;min-height:34px;text-align:center;border:2px dashed var(--ap-accent);border-radius:6px;background:var(--ap-accent-soft);font:600 .95rem var(--ap-mono)}
+.ap-gtab td.blank.right input{border:2px solid var(--ap-ok);background:var(--ap-ok-soft)}
+.ap-gtab td.blank.wrong input{border:2px solid var(--ap-bad);background:var(--ap-bad-soft)}
+.ap-gtab td.blank .ans{display:block;font-size:.72rem;color:var(--ap-ok);font-weight:700}
+.ap-mini-grid{display:inline-grid;gap:3px;margin:4px 10px 4px 0;vertical-align:middle}
+.ap-mini-grid div{display:flex;gap:3px}
+.ap-mini-grid i{width:20px;height:20px;border:1px solid var(--ap-line);border-radius:4px;background:var(--ap-surface2)}
+.ap-mini-grid i.c{background:var(--ap-cand-soft);border-color:var(--ap-cand);position:relative}
+.ap-mini-grid i.c::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--ap-cand)}
+.ap-mini-tab{font:500 .9rem/1.7 var(--ap-mono);background:var(--ap-surface2);border-radius:8px;padding:6px 12px;display:inline-block;margin-top:4px}
+.ap-gfb{margin-top:12px}
+.ap-ag{display:block;width:100%;max-width:640px;margin:6px auto;background:var(--ap-surface2);border-radius:10px;touch-action:manipulation}
+.ap-ag .ag-e{cursor:pointer}
+.ap-ag .ag-e .ln{stroke:var(--ap-ink3);stroke-width:2.5;fill:none}
+.ap-ag .ag-e .hit{stroke:transparent;stroke-width:22}
+.ap-ag .ag-e:hover .ln,.ap-ag .ag-e:focus-visible .ln{stroke:var(--ap-accent)}
+.ap-ag .ag-e.acc .ln{stroke:var(--ap-ok);stroke-width:5}
+.ap-ag .ag-e.off .ln{stroke:var(--ap-bad);stroke-dasharray:5 5;opacity:.55}
+.ap-ag .wbg{fill:var(--ap-surface);stroke:var(--ap-line)}
+.ap-ag .wt{font:700 12px var(--ap-mono);fill:var(--ap-ink);pointer-events:none}
+.ap-ag .ag-n circle{fill:var(--ap-surface);stroke:var(--ap-ink2);stroke-width:2.5}
+.ap-ag .ag-n text{font:700 15px var(--ap-mono);fill:var(--ap-ink);pointer-events:none}
+.ap-ag .ag-n.in circle{fill:var(--ap-ok-soft);stroke:var(--ap-ok)}
+.ap-ag .ag-n.src circle{stroke:var(--ap-accent);stroke-width:4}
+.ap-ag .ag-n .dv{font:700 12px var(--ap-mono);fill:var(--ap-accent)}
+svg.ap-ag [data-n]{cursor:default}
+.ap-match{display:grid;grid-template-columns:1fr 1.4fr;gap:10px 18px}
+.ap-match .col{display:grid;gap:8px;align-content:start}
+.ap-mc{text-align:left;min-height:44px;padding:8px 12px;border-radius:9px;border:1.5px solid var(--ap-line);background:var(--ap-surface);cursor:pointer;font-size:.92rem;line-height:1.4}
+.ap-mc.r{font-family:var(--ap-mono);font-size:.84rem}
+.ap-mc:hover:not(:disabled){border-color:var(--ap-accent)}
+.ap-mc.sel{border-color:var(--ap-accent);background:var(--ap-accent-soft);box-shadow:0 0 0 2px var(--ap-accent) inset}
+.ap-mc.done{border-color:var(--ap-ok);background:var(--ap-ok-soft);opacity:.85}
+.ap-mc.shake{animation:ap-shake .35s}
+@keyframes ap-shake{20%{transform:translateX(-5px)}50%{transform:translateX(5px)}80%{transform:translateX(-3px)}}
+@media (max-width:560px){.ap-match{grid-template-columns:1fr}}
+
+/* ---------- Part 3: อนิเมชัน DTM / NTM / TSP ---------- */
+.tm-svg{display:block;width:100%;max-width:720px;margin:0 auto;height:auto}
+.tm-cnt{text-align:center;font:600 .95rem var(--ap-mono);margin-top:6px;min-height:1.6em}
+.tm-e{stroke:var(--ap-line);stroke-width:2}
+.tm-e.on{stroke:var(--ap-accent);stroke-width:4}
+.tm-n circle{fill:var(--ap-surface);stroke:var(--ap-ink3);stroke-width:2;transition:fill .25s,stroke .25s}
+.tm-n.act circle{fill:var(--ap-cand-soft);stroke:var(--ap-cand)}
+.tm-n.on circle{fill:var(--ap-accent-soft);stroke:var(--ap-accent)}
+.tm-n.dead circle{fill:var(--ap-bad-soft);stroke:var(--ap-bad)}
+.tm-n.acc circle{fill:var(--ap-ok-soft);stroke:var(--ap-ok);stroke-width:3.5}
+.tm-n text{font:700 13px var(--ap-mono);fill:var(--ap-ink);pointer-events:none}
+.tm-n.dead text{fill:var(--ap-bad)}
+.tm-n.acc text{fill:var(--ap-ok);font-size:16px}
+.tm-n.leaf{cursor:pointer}
+.tsp-c circle{fill:var(--ap-surface);stroke:var(--ap-ink2);stroke-width:2.5}
+.tsp-c.home circle{fill:var(--ap-accent-soft);stroke:var(--ap-accent)}
+.tsp-c text{font:700 13px var(--ap-mono);fill:var(--ap-ink)}
+.tsp-cur{fill:none;stroke:var(--ap-cand);stroke-width:3.5;stroke-linejoin:round}
+.tsp-best{fill:var(--ap-ok-soft);fill-opacity:.35;stroke:var(--ap-ok);stroke-width:5;stroke-linejoin:round;opacity:.9}
+.gr-bars{display:grid;gap:10px;margin:14px 0 6px}
+.gr-b{display:grid;grid-template-columns:5.5em 1fr minmax(8em,auto);gap:10px;align-items:center;font:600 .86rem var(--ap-mono)}
+.gr-b .trk{height:16px;border-radius:8px;background:var(--ap-surface2);overflow:hidden}
+.gr-b .fill{height:100%;border-radius:8px;transition:width .3s}
+.gr-b.poly .fill{background:var(--ap-ok)}.gr-b.exp .fill{background:var(--ap-cand)}.gr-b.fact .fill{background:var(--ap-bad)}
+.gr-b .v{text-align:right;color:var(--ap-ink2)}
+@media (max-width:520px){.gr-b{grid-template-columns:4.5em 1fr}.gr-b .v{grid-column:1/-1;text-align:left}}
+
+/* ---------- อนิเมชันโจทย์ Greedy (ga-*) และเดโมเกณฑ์ ---------- */
+.ga{display:block;width:100%;height:auto}
+.ga-axis{stroke:var(--ap-ink3);stroke-width:1.5}
+.ga-tick{font:500 11px var(--ap-mono);fill:var(--ap-ink3);text-anchor:middle}
+.ga-lab{font:600 11.5px var(--ap-sans);fill:var(--ap-ink)}
+.ga-big{font:700 20px var(--ap-mono);fill:var(--ap-ink);text-anchor:middle}
+.ga-mark{stroke:var(--ap-accent);stroke-width:2;stroke-dasharray:4 3}
+.ga-marklab{font:700 11.5px var(--ap-mono);fill:var(--ap-accent)}
+.ga-bar,.ga-chip,.ga-slot,.ga-bag{fill:var(--ap-surface2);stroke:var(--ap-ink3);stroke-width:1.2}
+.ga-bag{fill:none;stroke-width:2;stroke-dasharray:5 4}
+.ga-bar.ok,.ga-chip.ok,.ga-slot.ok{fill:var(--ap-ok-soft);stroke:var(--ap-ok)}
+.ga-bar.cand,.ga-chip.cand,.ga-slot.cand{fill:var(--ap-cand-soft);stroke:var(--ap-cand)}
+.ga-bar.bad,.ga-chip.bad{fill:var(--ap-bad-soft);stroke:var(--ap-bad);stroke-dasharray:4 3}
+.ga-cover{fill:var(--ap-accent-soft);stroke:var(--ap-accent);opacity:.75}
+.ga-tower{fill:var(--ap-accent)}
+.ga-house{fill:var(--ap-surface2);stroke:var(--ap-ink2);stroke-width:2}
+.ga-house.ok{fill:var(--ap-ok);stroke:var(--ap-ok)}.ga-house.cand{fill:var(--ap-cand);stroke:var(--ap-cand)}
+.ap-crit{display:block;width:100%;height:auto}
+.gp-anim .m-gr,.ap-card .m-gr{margin-top:10px}
+
+/* ---------- พิมพ์ (Cheat sheet) ---------- */
+@media print{
+  :root{--ap-bg:#fff;--ap-surface:#fff;--ap-surface2:#f3f3f3;--ap-ink:#000;--ap-ink2:#333;--ap-line:#bbb}
+  .ap-top,.ap-side,.ap-scrim,.ap-cta,.ap-pn,.ap-toast,#cs-print,.ap-skip{display:none!important}
+  .ap-shell{display:block}
+  .ap-main{padding:0}
+  body{font-size:11pt}
+  .ap-h2{margin:14px 0 6px;break-after:avoid}
+  .ap-tscroll{overflow:visible;border:0}
+  .ap-t{font-size:9pt}
+  .ap-t th,.ap-t td{padding:3px 6px}
+  tr{break-inside:avoid}
+}
+
+/* ---------- Week 7 อนิเมชัน (.m-w7) — พอร์ตจาก week7-game.html ใช้ token กลาง ---------- */
+.m-w7{--w-card:var(--ap-surface);--w-card2:var(--ap-surface2);--w-mut:var(--ap-ink2);--w-line:var(--ap-line)}
+.m-w7 .stage{background:var(--ap-surface);border:1px solid var(--w-line);border-radius:12px;padding:14px;overflow-x:auto;min-height:120px}
+.m-w7 .msg{margin:10px 0;padding:10px 12px;background:var(--ap-accent-soft);border-left:4px solid var(--ap-accent);border-radius:8px;min-height:44px;line-height:1.55}
+.m-w7 .ctrl{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.m-w7 .ctrl button,.m-w7 button.b{min-height:40px;padding:6px 14px;border-radius:9px;border:1px solid var(--w-line);background:var(--ap-surface);cursor:pointer;font-weight:600}
+.m-w7 .ctrl button:hover,.m-w7 button.b:hover{border-color:var(--ap-accent)}
+.m-w7 .ctrl button.pri{background:var(--ap-accent);border-color:var(--ap-accent);color:var(--ap-accent-ink)}
+.m-w7 .cnt{margin-left:auto;font:600 .82rem var(--ap-mono);color:var(--w-mut)}
+.m-w7 .row{display:flex;align-items:center;gap:4px;margin:6px 0}
+.m-w7 .lab{width:96px;flex:none;color:var(--w-mut);font-size:.8rem}
+.m-w7 .cellw{display:flex;flex-direction:column;align-items:center}
+.m-w7 .cell{width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:var(--w-card2);border:2px solid var(--ap-ink3);border-radius:8px;font:700 .95rem var(--ap-mono);transition:all .35s}
+.m-w7 .cell.sm{width:28px;height:32px;border-radius:5px;font-size:.85rem}
+.m-w7 .idx{font:500 .62rem var(--ap-mono);color:var(--w-mut);height:14px}
+.m-w7 .cell.i{background:var(--ap-accent);border-color:var(--ap-accent);color:var(--ap-accent-ink);transform:translateY(-6px)}
+.m-w7 .cell.j{background:var(--ap-cand);border-color:var(--ap-cand);color:var(--ap-bg);transform:translateY(-6px)}
+.m-w7 .cell.ok{background:var(--ap-ok-soft);border-color:var(--ap-ok);color:var(--ap-ok)}
+.m-w7 .cell.bad{background:var(--ap-bad-soft);border-color:var(--ap-bad);color:var(--ap-bad)}
+.m-w7 .cell.win{border-color:var(--ap-cand);background:var(--ap-cand-soft)}
+.m-w7 .cell.pat{background:var(--ap-accent-soft);border-color:var(--ap-tm)}
+.m-w7 .cell.empty{background:transparent;border-style:dashed}
+.m-w7 .cell.pop{animation:ap-pop .5s}
+@keyframes ap-pop{40%{transform:scale(1.3)}}
+.m-w7 .scr{overflow-x:auto;padding-bottom:6px}
+.m-w7 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.m-w7 .chip{background:var(--w-card2);padding:3px 10px;border-radius:8px;font:500 .84rem var(--ap-mono)}
+.m-w7 .chip b{color:var(--ap-accent)}
+.m-w7 .seg{display:inline-flex;background:var(--w-card2);border-radius:10px;padding:3px;gap:3px}
+.m-w7 .seg button{border:0;background:transparent;padding:7px 12px;border-radius:8px;cursor:pointer;font-weight:600}
+.m-w7 .seg button.on{background:var(--ap-accent);color:var(--ap-accent-ink)}
+.m-w7 input[type=text]{background:var(--ap-surface);border:1.5px solid var(--w-line);color:var(--ap-ink);padding:8px 10px;border-radius:8px;font:500 .92rem var(--ap-mono);min-width:0;max-width:100%}
+.m-w7 .inp{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
+.m-w7 .inp label{color:var(--w-mut);font-size:.82rem}
+.m-w7 .hash{display:flex;gap:6px}
+.m-w7 .hcol{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:62px}
+.m-w7 .hcol .cell{width:60px;font-size:.75rem;height:38px}
+.m-w7 .bt{display:flex;flex-direction:column;align-items:center}
+.m-w7 .bn{display:flex;border:2px solid var(--ap-ink3);border-radius:8px;background:var(--w-card2);padding:4px 8px;font:700 .82rem var(--ap-mono);white-space:nowrap;transition:all .4s}
+.m-w7 .bn.hl{background:var(--ap-accent);border-color:var(--ap-accent);color:var(--ap-accent-ink)}
+.m-w7 .bn.full{background:var(--ap-bad-soft);border-color:var(--ap-bad);color:var(--ap-bad);animation:ap-shake .4s}
+.m-w7 .bn.new{background:var(--ap-ok-soft);border-color:var(--ap-ok);color:var(--ap-ok);animation:ap-pop .6s}
+.m-w7 .bn span{padding:0 5px}
+.m-w7 .bch{display:flex;gap:10px;margin-top:22px;position:relative}
+.m-w7 .bch>.bt{position:relative}
+.m-w7 .bch>.bt::before{content:"";position:absolute;top:-22px;left:50%;width:2px;height:22px;background:var(--ap-ink3)}
+@media (max-width:600px){.m-w7 .cell{width:38px;height:38px}.m-w7 .lab{width:56px}}

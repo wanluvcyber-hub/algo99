@@ -1,0 +1,30 @@
+/* tokens.css — สี/ฟอนต์กลางของทั้งเว็บ (ทุกโมดูลแมปตัวแปรเดิมมาที่ชุดนี้) */
+:root{
+  --ap-bg:#f1f4f1; --ap-surface:#ffffff; --ap-surface2:#e6ebe6; --ap-ink:#16201b; --ap-ink2:#4d5a53; --ap-ink3:#7d8983; --ap-line:#d0d8d1;
+  --ap-accent:#1d5cab; --ap-accent-soft:#dce7f5; --ap-accent-ink:#ffffff;
+  --ap-cand:#b06d05; --ap-cand-soft:#fcefd2; --ap-ok:#18794a; --ap-ok-soft:#d9f0e2; --ap-bad:#bf3629; --ap-bad-soft:#fbe1dd;
+  --ap-dp:#1d5cab; --ap-gr:#18794a; --ap-tm:#8a3fb0; --ap-rv:#b06d05;
+  --ap-sans:'IBM Plex Sans Thai','Noto Sans Thai','Sarabun',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --ap-display:'Chakra Petch','IBM Plex Sans Thai',system-ui,sans-serif;
+  --ap-mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --ap-shadow:0 1px 2px rgba(22,32,27,.06),0 4px 14px rgba(22,32,27,.05);
+  --ap-radius:10px; --ap-side:272px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ap-bg:#0f1412; --ap-surface:#161d1a; --ap-surface2:#1f2824; --ap-ink:#e3eae5; --ap-ink2:#a0ada6; --ap-ink3:#76837c; --ap-line:#2b3631;
+    --ap-accent:#7eaef0; --ap-accent-soft:#1b2c44; --ap-accent-ink:#0b1422;
+    --ap-cand:#f0b13a; --ap-cand-soft:#3a2d10; --ap-ok:#55c98a; --ap-ok-soft:#133222; --ap-bad:#ff8375; --ap-bad-soft:#3d1c18;
+    --ap-dp:#7eaef0; --ap-gr:#55c98a; --ap-tm:#c996e8; --ap-rv:#f0b13a;
+    --ap-shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ap-bg:#0f1412; --ap-surface:#161d1a; --ap-surface2:#1f2824; --ap-ink:#e3eae5; --ap-ink2:#a0ada6; --ap-ink3:#76837c; --ap-line:#2b3631;
+  --ap-accent:#7eaef0; --ap-accent-soft:#1b2c44; --ap-accent-ink:#0b1422;
+  --ap-cand:#f0b13a; --ap-cand-soft:#3a2d10; --ap-ok:#55c98a; --ap-ok-soft:#133222; --ap-bad:#ff8375; --ap-bad-soft:#3d1c18;
+  --ap-dp:#7eaef0; --ap-gr:#55c98a; --ap-tm:#c996e8; --ap-rv:#f0b13a;
+  --ap-shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.25);
+}
